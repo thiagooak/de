@@ -17,8 +17,8 @@
 
 <div id="content" contenteditable="true">Hallo!<br><br>
   1) Replace me with some text in German<br>
-  2) Double click a word to select it<br>
-  3) See it's synonyms on the right
+  2) Tap/Click a word to select it<br>
+  3) See it's synonyms
 </div>
 
 <div id="translation"></div>
