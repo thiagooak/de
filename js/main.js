@@ -1,6 +1,7 @@
 $( document ).ready(function() {
   $('#content').mouseup(function() {
     var text = getSelectedText();
+    console.log(text);
     if (text != '') {
       displayTranslation(text);
     }
@@ -24,10 +25,30 @@ $( document ).ready(function() {
 
   function getSelectedText() {
     if (window.getSelection) {
-      return window.getSelection().toString();
+      selection = window.getSelection();
+      if (selection.type == 'Caret') {
+        return getWordAtOffset(selection.focusNode.textContent, selection.focusOffset);
+      } else {
+        return selection.toString();
+      }
     } else if (document.selection) {
       return document.selection.createRange().text;
     }
     return '';
+  }
+
+  function getWordAtOffset(text, offset) {
+    start = offset;
+    end = offset;
+
+    while (text.substring(end, end + 1) != ' ' && end < text.length) {
+      end++;
+    }
+
+    while (text.substring(start, start - 1) != ' ' && start > 0) {
+      start--;
+    }
+
+    return text.substring(start, end);
   }
 });

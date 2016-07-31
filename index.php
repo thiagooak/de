@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Hack</title>
   <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 
   <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="css/main.css">
@@ -15,12 +15,13 @@
 </head>
 <body>
 
-<div id="translation"></div>
 <div id="content" contenteditable="true">Hallo!<br><br>
   1) Replace me with some text in German<br>
   2) Double click a word to select it<br>
   3) See it's synonyms on the right
 </div>
+
+<div id="translation"></div>
 
 <footer>made with &#9829; in berlin</footer>
 
