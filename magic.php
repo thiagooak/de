@@ -27,7 +27,6 @@ foreach ($result['synsets'] as $syn) {
 }
 
 $syns = array_unique($syns);
-//shuffle($syns);
 
 $result = [
   'input' => $input,
